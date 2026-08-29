@@ -1,0 +1,51 @@
+customer_id,name,region,signup_date,segment
+1,Allison Hill,North America,2024-04-21,Retail
+2,Megan Mcclain,Asia Pacific,2023-11-28,Retail
+3,Allen Robinson,Europe,2025-02-16,SMB
+4,Cristian Santos,North America,2025-03-30,Enterprise
+5,Kevin Pacheco,North America,2023-09-03,Retail
+6,Melissa Peterson,Europe,2024-02-09,Retail
+7,Gabrielle Davis,North America,2023-12-09,Enterprise
+8,Lindsey Roman,Latin America,2025-10-13,Retail
+9,Valerie Gray,Asia Pacific,2025-04-06,SMB
+10,Lisa Hensley,North America,2025-05-03,SMB
+11,Amber Perez,Europe,2024-07-01,Enterprise
+12,David Garcia,Asia Pacific,2024-06-19,Retail
+13,Holly Wood,Europe,2024-04-07,SMB
+14,Timothy Wong,Asia Pacific,2025-06-06,Retail
+15,Nicholas Martin,Latin America,2024-10-05,Retail
+16,Margaret Hawkins DDS,Asia Pacific,2026-02-10,Enterprise
+17,Crystal Johnson,North America,2024-07-28,SMB
+18,Daniel Hahn,North America,2026-03-18,SMB
+19,Matthew Foster,Latin America,2026-04-27,Retail
+20,Derek Wright,Asia Pacific,2025-04-16,SMB
+21,Kevin Hurst,Asia Pacific,2024-10-26,Enterprise
+22,Zachary Hicks,North America,2023-12-02,Retail
+23,Brian Burton,Europe,2025-12-18,SMB
+24,Arthur James,North America,2026-07-23,SMB
+25,Tricia Valencia,North America,2023-09-09,Retail
+26,Melanie Herrera,Latin America,2024-06-07,Enterprise
+27,Ashley Graham,Asia Pacific,2024-12-23,Retail
+28,Sherri Baker,Asia Pacific,2025-02-11,Retail
+29,Thomas Harrell,Asia Pacific,2024-07-10,SMB
+30,Lisa Hernandez,North America,2025-11-17,Enterprise
+31,Paula Moreno,Europe,2023-08-28,Enterprise
+32,Alec Hickman,Europe,2026-03-20,Retail
+33,Elizabeth Brown,Latin America,2026-03-20,Retail
+34,Angelica Tucker,Europe,2023-11-09,Enterprise
+35,Pamela Anderson,North America,2025-01-15,Retail
+36,Deborah Brennan,North America,2024-11-20,SMB
+37,Joshua Blair,Latin America,2024-03-29,Retail
+38,Zachary Santos,Europe,2024-12-06,SMB
+39,Barbara Walker,Asia Pacific,2024-08-22,Retail
+40,Crystal Robinson,Latin America,2023-11-11,Retail
+41,Crystal Whitehead,Latin America,2026-02-28,Retail
+42,David Caldwell,Europe,2024-04-12,Retail
+43,Timothy Duncan,Asia Pacific,2025-01-12,SMB
+44,Rhonda Lee,Latin America,2023-12-09,SMB
+45,Jeff Owens,Latin America,2025-10-12,Retail
+46,Victoria Garcia,Europe,2024-10-29,Enterprise
+47,Scott Wright,North America,2024-03-17,SMB
+48,Javier Ramirez,North America,2024-05-20,Retail
+49,Jessica Callahan,Europe,2025-04-05,SMB
+50,Zachary Huff,Latin America,2026-06-24,Enterprise
