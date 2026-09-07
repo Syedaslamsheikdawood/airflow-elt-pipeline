@@ -43,7 +43,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install Airflow
-        run: pip install apache-airflow==2.10.2
+        run: pip install apache-airflow==2.10.2 psycopg2-binary
 
       # Imports every DAG file directly and fails if any raises an
       # exception (syntax errors, bad imports, broken top-level
