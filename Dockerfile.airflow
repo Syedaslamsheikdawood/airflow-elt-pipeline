@@ -1,0 +1,8 @@
+FROM apache/airflow:2.10.2
+
+# Adds dbt on top of the stock Airflow image so Airflow tasks can
+# actually invoke `dbt run` as a subprocess. This is a common
+# real-world pattern — most teams run a customized Airflow image
+# rather than the stock one, since DAGs almost always need extra
+# packages beyond what ships by default.
+RUN pip install --no-cache-dir dbt-postgres==1.11.0

@@ -1,0 +1,12 @@
+orders_dbt:
+  outputs:
+    dev:
+      type: postgres
+      host: postgres          # internal Docker network hostname — not localhost
+      port: 5432              # internal port — not the 5434 host mapping
+      user: airflow
+      pass: airflow
+      dbname: airflow
+      schema: dbt_orders
+      threads: 4
+  target: dev

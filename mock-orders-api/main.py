@@ -9,10 +9,10 @@ transactional system would produce new orders over time.
 """
 
 import random
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
-from fastapi import FastAPI, Query
 from faker import Faker
+from fastapi import FastAPI, Query
 
 app = FastAPI(title="Mock Orders API")
 fake = Faker()
@@ -44,7 +44,7 @@ def _random_status() -> str:
 def _random_order_date() -> str:
     # Orders spread across the last 30 days, to look like a rolling feed.
     days_ago = random.randint(0, 30)
-    order_dt = datetime.utcnow() - timedelta(
+    order_dt = datetime.now(timezone.utc) - timedelta(
         days=days_ago,
         hours=random.randint(0, 23),
         minutes=random.randint(0, 59),

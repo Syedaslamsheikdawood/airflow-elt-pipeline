@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: airflow_pipeline
+    # load_raw_data (Airflow task) writes raw_orders and raw_customers
+    # directly into the default 'public' schema, with no transformation
+    # applied — dbt owns everything downstream of this point.
+    schema: public
+    tables:
+      - name: raw_orders
+      - name: raw_customers

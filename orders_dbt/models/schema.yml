@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: enriched_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+      - name: region
+        tests:
+          - not_null
+
+  - name: revenue_by_region
+    columns:
+      - name: region
+        tests:
+          - not_null
+      - name: segment
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null

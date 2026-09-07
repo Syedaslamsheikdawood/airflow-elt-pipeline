@@ -1,5 +1,7 @@
 x-airflow-common: &airflow-common
-  image: apache/airflow:2.10.2
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
   environment: &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
@@ -20,6 +22,13 @@ x-airflow-common: &airflow-common
     - ${AIRFLOW_PROJ_DIR:-.}/data:/opt/airflow/data
     - airflow-logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+    # Mounts the dbt project into the container so Airflow tasks can
+    # invoke `dbt run` against it. Also mounts a container-specific
+    # profiles.yml (separate from the one on your host machine,
+    # since the host connects via localhost:5434 but the container
+    # connects via the internal Docker network at postgres:5432).
+    - ${AIRFLOW_PROJ_DIR:-.}/orders_dbt:/opt/airflow/orders_dbt
+    - ${AIRFLOW_PROJ_DIR:-.}/dbt_profiles:/opt/airflow/dbt_profiles
 
 services:
   postgres:
@@ -28,6 +37,8 @@ services:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
       POSTGRES_DB: airflow
+    ports:
+      - "5434:5432"
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
     healthcheck:
@@ -36,11 +47,13 @@ services:
       retries: 5
       start_period: 5s
     restart: always
+
   mock-orders-api:
     build: ./mock-orders-api
     ports:
       - "8000:8000"
     restart: always
+
   airflow-init:
     <<: *airflow-common
     depends_on:
